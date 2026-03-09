@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEAN DELUXE | Премиальные морепродукты</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">OCEAN<span>DELUXE</span></div>
+            <nav class="nav">
+                <a href="#catalog">Коллекция</a>
+                <a href="#about">О технологии</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="cart-btn" onclick="toggleCart(true)">
+                <span class="cart-label">КОРЗИНА</span>
+                <div class="cart-icon-box">
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+                <span class="subtitle">Premium Seafood Boutique</span>
+                <h1 class="serif">Безупречный вкус <br>дикой природы</h1>
+                <p>Эксклюзивный импорт морепродуктов из экологически чистых регионов планеты.</p>
+                <a href="#catalog" class="btn-gold">Смотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Бескомпромиссная свежесть) -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-info" data-aos="fade-right">
+                    <h2 class="serif">Бескомпромиссная <br>свежесть</h2>
+                    <p class="main-desc">Мы используем технологию <strong>Super Frozen (-60°C)</strong>. Это позволяет «поставить на паузу» биологические процессы в рыбе сразу после вылова, сохраняя структуру волокон и омега-3 в неизменном виде.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feat-num">01</span>
+                            <div class="feat-content">
+                                <h4 class="serif">Дикий вылов</h4>
+                                <p>Рыба, выросшая в естественной среде, обладает уникальным составом нутриентов.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-num">02</span>
+                            <div class="feat-content">
+                                <h4 class="serif">Без консервантов</h4>
+                                <p>Только чистый продукт. Мы не используем шприцевание и химическую обработку.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-num">03</span>
+                            <div class="feat-content">
+                                <h4 class="serif">Эко-упаковка</h4>
+                                <p>Специальные термобоксы сохраняют температурный режим до 12 часов пути.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="image-frame"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Sticky -->
+    <div class="category-nav-wrap">
+        <div class="container">
+            <div class="category-list" id="category-tabs">
+                <!-- JS Inject -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalog -->
+    <main class="catalog" id="catalog">
+        <div class="container">
+            <div class="product-grid" id="product-grid">
+                <!-- JS Inject -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">OCEAN<span>DELUXE</span></div>
+                    <p>Превращаем каждый ужин в событие. <br>Доставка деликатесов ресторанного уровня.</p>
+                </div>
+                <div class="footer-links">
+                    <h5 class="serif">Навигация</h5>
+                    <a href="#catalog">Каталог</a>
+                    <a href="#about">О нас</a>
+                    <a href="#">Доставка</a>
+                </div>
+                <div class="footer-contact">
+                    <h5 class="serif">Связаться с нами</h5>
+                    <p>Москва, ул. Никитская 15</p>
+                    <p>+7 (495) 000-00-00</p>
+                    <div class="socials">
+                        <a href="#">Telegram</a>
+                        <a href="#">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 OCEAN DELUXE. Premium Seafood Solutions.</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart(false)"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-head">
+            <h2 class="serif">Корзина</h2>
+            <button class="close-ani-btn" onclick="toggleCart(false)">
+                <span></span><span></span>
+            </button>
+        </div>
+        <div class="cart-body" id="cart-items">
+            <!-- Items via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итоговая сумма</span>
+                <span id="total-price">0 ₽</span>
+            </div>
+            <button class="btn-checkout" onclick="openCheckout()">Оформить доставку</button>
+        </div>
+    </aside>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCheckout()">&times;</button>
+            <h2 class="serif">Ваш заказ</h2>
+            <form id="order-form">
+                <input type="text" id="name" placeholder="Имя" required>
+                <input type="tel" id="phone" placeholder="Телефон" required>
+                <input type="text" id="address" placeholder="Адрес доставки" required>
+                <textarea id="comment" placeholder="Комментарий к заказу"></textarea>
+                <button type="submit" class="btn-send">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
